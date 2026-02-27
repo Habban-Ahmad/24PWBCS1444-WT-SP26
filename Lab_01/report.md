@@ -1,0 +1,1 @@
+In this lab, I successfully set up my development environment on macOS. I learned to use Git for version control, including creating repositories and managing branches. This experience helped me understand how to track changes and collaborate systematically.

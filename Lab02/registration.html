@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+    <form action="#">
+        <label>Full Name:</label><br>
+        <input type="text" name="studentName" required><br><br>
+
+        <label>Registration Number:</label><br>
+        <input type="text" name="regNum" placeholder="e.g. 24PWBCS1394"><br><br>
+
+        <label>Email Address:</label><br>
+        <input type="email" name="userEmail" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="userPass"><br><br>
+
+        <label>Select Course:</label><br>
+        <select name="course">
+            <option value="web">Web Technologies</option>
+            <option value="ds">Data Structures</option>
+            <option value="calculus">Calculus</option>
+        </select><br><br>
+
+        <label>Semester:</label><br>
+        <input type="radio" name="semester" value="3"> 3rd
+        <input type="radio" name="semester" value="4"> 4th<br><br>
+
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to terms and conditions</label><br><br>
+
+        <button type="submit">Submit Registration</button> </form>
+</body>
+</html>
