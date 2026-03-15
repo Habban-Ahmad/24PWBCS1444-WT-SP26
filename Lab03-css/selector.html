@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 - CSS Selectors</title>
+    <style>
+        /* 1. Universal Selector: Sets the default font for the whole page [cite: 55] */
+        * { font-family: 'Arial', sans-serif; }
+
+        /* 2. Element Selector: Styles all h1 tags [cite: 49] */
+        h1 { color: #2c3e50; text-align: center; }
+
+        /* 3. Class Selector: Styles elements with the 'highlight' class [cite: 50] */
+        .highlight { background-color: #f1c40f; padding: 5px; }
+
+        /* 4. ID Selector: Styles the unique 'main-title' [cite: 54] */
+        #main-title { text-transform: uppercase; border-bottom: 2px solid black; }
+
+        /* 5. Descendant Combinator: Styles spans ONLY inside a div [cite: 64] */
+        div span { color: red; font-weight: bold; }
+
+        /* 6. Attribute Selector: Styles inputs with type="text" [cite: 59] */
+        input[type="text"] { border: 2px solid #3498db; border-radius: 4px; }
+
+        /* 7. Pseudo-class: Changes link color on hover [cite: 69] */
+        a:hover { color: #e67e22; text-decoration: underline; }
+
+        /* 8. Pseudo-element: Styles the first letter of a paragraph [cite: 75] */
+        p::first-letter { font-size: 200%; color: green; }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Selector Demonstration</h1>
+    
+    <p class="highlight">This paragraph is highlighted using a class selector.</p>
+    
+    <div>
+        <p>This is a paragraph with a <span>red bold span</span> inside a div.</p>
+    </div>
+
+    <a href="#">Hover over this link</a><br><br>
+
+    <input type="text" placeholder="I am a styled text input">
+</body>
+</html>

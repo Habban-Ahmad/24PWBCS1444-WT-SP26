@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1: CSS Selectors Demonstration</title>
+    <style>
+        /* 1. Element Selector: Targets all <body> and <h1> tags */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background-color: #f4f7f6;
+            line-height: 1.8;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        /* 2. ID Selector (#): Targets the unique main title */
+        #main-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* 3. Class Selector (.): Targets groups of elements */
+        .description-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
+            background-color: #fef5e7;
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">Task 1: Selectors</h1>
+
+    <div class="description-box">
+        <p>This box is styled using a <strong>Class Selector</strong>.</p>
+        
+        <p>You can use classes to <span class="highlight">highlight specific words</span> within a sentence.</p>
+        
+        <p>The font and spacing of this entire page are controlled by <strong>Element Selectors</strong> (body and p).</p>
+    </div>
+
+</body>
+</html>

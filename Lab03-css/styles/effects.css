@@ -1,0 +1,107 @@
+/* Container styling */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Base box styling */
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.5s ease; /* Smooth transitions for all boxes [cite: 136] */
+    cursor: pointer;
+}
+
+/* Task 9.1: 2D Transformations  */
+.rotate:hover { transform: rotate(45deg); }
+.scale:hover { transform: scale(1.2); }
+.skew:hover { transform: skewX(20deg); }
+
+/* Task 9.2: 3D Transform Effects  */
+.gallery-container { perspective: 1000px; } /* Required for 3D depth */
+.rotate-3d:hover {
+    transform: rotateY(180deg);
+}
+
+/* Task 9.3: Transform Origin Demonstration [cite: 217] */
+.origin-demo {
+    transform-origin: top left; /* Rotates around the corner instead of center */
+    background-color: #e67e22;
+}
+.origin-demo:hover {
+    transform: rotate(20deg);
+}
+
+
+
+
+/* Task 10.1: Gradient Text Effects  */
+.gradient-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    
+    /* Add the standard version first */
+    background-clip: text; 
+    
+    /* Then the webkit version for Chrome/Safari support */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    
+    text-align: center;
+}
+
+/* Task 10.2: Custom Checkboxes  */
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+.custom-checkbox input { display: none; }
+.checkmark {
+    position: absolute;
+    top: 0; left: 0;
+    height: 25px; width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark { background-color: #ccc; }
+.custom-checkbox input:checked ~ .checkmark { background-color: #2196F3; }
+
+/* Task 10.3: Loading Animations using CSS  */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px; height: 60px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Task 10.4: Text Clipping with Background Image  */
+.clipped-text {
+    font-size: 6rem;
+    font-weight: 900;
+    /* CHANGE THIS LINE to a real image in your folder */
+    background: url('../images/backgrounds/pattern.JPG') center; 
+    background-size: cover;
+    
+    /* The magic clipping properties */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* This makes the text 'clear' so the image shows through */
+}

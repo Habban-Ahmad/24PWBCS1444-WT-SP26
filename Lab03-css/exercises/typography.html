@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2 - Typography Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Playfair+Display:ital@1&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Task 2: Using different units (px, em, rem) */
+        :root { font-size: 16px; }
+
+        body { 
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    /* Task 3: Background Styling */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3rem; /* 48px - Scales with root [cite: 150] */
+            text-align: center; /* [cite: 151] */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* [cite: 157] */
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em; /* Scales relative to parent [cite: 150] */
+            text-transform: uppercase; /* [cite: 156] */
+            letter-spacing: 2px; /* [cite: 95] */
+            color: #555;
+        }
+
+        .highlight-text {
+            font-size: 18px; /* Fixed unit [cite: 150] */
+            text-decoration: underline dotted #3498db; /* [cite: 156] */
+        }
+    </style>
+</head>
+<body>
+    <h1>Typography Showcase</h1>
+    
+    <p class="subtitle">Exploring Professional Web Fonts</p>
+    
+    <p>This paragraph uses <strong>Roboto</strong>. It's clean and highly readable for body text.</p>
+    
+    <p class="highlight-text">This line demonstrates fixed pixel sizing and custom text decoration.</p>
+</body>
+</html>

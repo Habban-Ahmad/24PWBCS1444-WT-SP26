@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Background Gallery</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        
+        /* Container for the gallery cards */
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+        
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+            text-align: center;
+        }
+
+        /* 1. Solid Color Background */
+        .solid { background-color: #3498db; }
+
+        /* 2. Linear Gradient Background */
+        .linear { background: linear-gradient(45deg, #ee0979, #ff6a00); }
+
+        /* 3. Radial Gradient Background */
+        .radial { background: radial-gradient(circle, #00c6ff, #0072ff); }
+
+        /* 4. Background Image with No-Repeat and Cover */
+        .image { 
+            background-image: url('../assets/images/background-pattern.png'); 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 5. Multiple Background Layers with Blend Mode */
+        .multi-layered {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                              url('../assets/images/background-pattern.png');
+            background-blend-mode: overlay;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Demonstration Gallery</h1>
+    
+    <div class="container">
+        <div class="box solid">Solid Color</div>
+        <div class="box linear">Linear Gradient</div>
+        <div class="box radial">Radial Gradient</div>
+        <div class="box image">Image (Cover)</div>
+        <div class="box multi-layered">Multi-Layer + Blend</div>
+    </div>
+</body>
+</html>

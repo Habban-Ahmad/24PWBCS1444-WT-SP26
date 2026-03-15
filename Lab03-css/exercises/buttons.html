@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5 - Button Collection</title>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; padding: 50px; display: flex; flex-direction: column; gap: 20px; align-items: center; }
+
+        /* Base Button Styles */
+        .btn {
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Task 5: Smooth transition effect */
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Shape and Color Variants */
+        .btn-primary { background: #3498db; color: white; padding: 10px 20px; border-radius: 5px; }
+        .btn-success { background: #2ecc71; color: white; padding: 10px 20px; border-radius: 50px; } /* Rounded */
+        .btn-outline { background: transparent; color: #e74c3c; border: 2px solid #e74c3c; padding: 8px 18px; }
+
+        /* Size Variants */
+        .btn-large { font-size: 1.5rem; padding: 15px 30px; }
+        .btn-small { font-size: 0.8rem; padding: 5px 10px; }
+
+        /* Interactive States (Task 5 Requirements) */
+        .btn:hover {
+            transform: translateY(-3px); /* Lifts button up */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Adds shadow depth */
+            filter: brightness(1.1); /* Makes it slightly lighter */
+        }
+
+        .btn:active {
+            transform: translateY(0); /* "Pushes" button down when clicked */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .btn:focus {
+            outline: 3px solid #f1c40f; /* Accessibility highlight */
+            outline-offset: 2px;
+        }
+
+        .btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Styling Collection</h1>
+    
+    <button class="btn btn-primary">Default Button</button>
+    <button class="btn btn-success btn-large">Large Rounded</button>
+    <a href="#" class="btn btn-outline">Outline Link</a>
+    <button class="btn btn-primary btn-small">Small Button</button>
+    <button class="btn btn-primary" disabled>Disabled State</button>
+</body>
+</html>

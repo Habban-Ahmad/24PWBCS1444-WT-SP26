@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 - Image Styling Portfolio</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px; background-color: #f4f7f6; }
+        
+        .gallery { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+        
+        .img-container { text-align: center; width: 250px; }
+
+        /* Base styling for all images */
+        img { width: 100%; height: 250px; object-fit: cover; transition: all 0.3s ease; }
+
+        /* 1. Rounded Corners and Circular Image */
+        .circular { border-radius: 50%; border: 5px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+        /* 2. Image Shadows and Borders */
+        .styled-border { border: 10px solid #2c3e50; box-shadow: 10px 10px 0px #3498db; }
+
+        /* 3. CSS Filters and Hover Effects */
+        .filter-effect { filter: grayscale(100%); cursor: pointer; }
+        .filter-effect:hover { filter: grayscale(0%); transform: scale(1.05); }
+
+        /* 4. Image Overlay with Text */
+        .overlay-card { position: relative; overflow: hidden; border-radius: 8px; }
+        .overlay-text { 
+            position: absolute; bottom: 0; background: rgba(0,0,0,0.6); 
+            color: white; width: 100%; padding: 10px; opacity: 0; transition: 0.3s;
+        }
+        .overlay-card:hover .overlay-text { opacity: 1; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Image Styling Portfolio</h1>
+    
+    <div class="gallery">
+        <div class="img-container">
+            <img src="../images/gallery/profile.JPG" class="circular" alt="Circular Profile">
+            <p>Circular Design</p>
+        </div>
+
+        <div class="img-container">
+            <img src="../images/gallery/profile.JPG" class="styled-border" alt="Styled Border">
+            <p>Shadow & Border</p>
+        </div>
+
+        <div class="img-container">
+            <img src="../images/gallery/profile.JPG" class="filter-effect" alt="Grayscale Filter">
+            <p>Hover Filter Effect</p>
+        </div>
+
+        <div class="img-container overlay-card">
+            <img src="../images/gallery/profile.JPG" alt="Overlay Example">
+            <div class="overlay-text">Project Info</div>
+        </div>
+    </div>
+</body>
+</html>
