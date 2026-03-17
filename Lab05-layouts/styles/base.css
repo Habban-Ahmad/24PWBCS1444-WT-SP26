@@ -1,0 +1,53 @@
+/* Base Styles - Default for Mobile */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.landing-header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.landing-hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                url('../images/gallery/product.jpg') center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.landing-btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.landing-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.landing-features {
+    padding: 40px 20px;
+    /* On mobile, elements stack naturally (display: block) */
+}
+
+.landing-feature {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}

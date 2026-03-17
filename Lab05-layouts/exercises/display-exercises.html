@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1: Display Property Showcase</title>
+    <link rel="stylesheet" href="../styles/display.css">
+</head>
+<body>
+    <h1>Display Property Comparison</h1>
+
+    <section class="comparison">
+        <h2>Block vs Inline vs Inline-Block</h2>
+        <div class="box block-box">Block Element (Div)</div>
+        <div class="box block-box">Block Element (Div)</div>
+        
+        <span class="box inline-box">Inline Element (Span)</span>
+        <span class="box inline-box">Inline Element (Span)</span>
+        
+        <div class="box inline-block-box">Inline-Block Element</div>
+        <div class="box inline-block-box">Inline-Block Element</div>
+    </section>
+
+    <section class="table-demo">
+        <h2>Table Display without Table Markup</h2>
+        <div class="custom-table">
+            <div class="table-row header">
+                <div class="table-cell">Property</div>
+                <div class="table-cell">Behavior</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Block</div>
+                <div class="table-cell">Takes full width</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Inline</div>
+                <div class="table-cell">Takes only necessary width</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visibility-demo">
+        <h2>Hidden Elements Demo</h2>
+        <p>The box below is "display: none" on mobile but appears on desktop.</p>
+        <div class="responsive-hidden">I am visible on larger screens!</div>
+    </section>
+</body>
+</html>

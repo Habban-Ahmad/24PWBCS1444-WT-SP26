@@ -1,0 +1,233 @@
+/* Container Logic */
+.grid-gallery {
+    display: grid; /* [cite: 94] */
+    /* auto-fit creates as many columns as will fit, min 250px [cite: 112] */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* [cite: 109-111] */
+    gap: 15px; /* [cite: 98] */
+    padding: 20px;
+    grid-auto-rows: 200px; /* Base height for rows */
+}
+
+/* Gallery Item Styles */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Task 6: Masonry Spanning Logic [cite: 101-102] */
+@media (min-width: 768px) {
+    .tall {
+        grid-row: span 2; /* Spans 2 rows [cite: 102] */
+    }
+    .wide {
+        grid-column: span 2; /* Spans 2 columns [cite: 101] */
+    }
+}
+
+/* Hover Overlay [cite: 182] */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "nav"
+        "ads"
+        "footer";
+}
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-areas: 
+            "header header header"
+            "nav main ads"
+            "footer footer footer";
+    }
+}
+.header { grid-area: header; }
+.nav { grid-area: nav; }
+.main { grid-area: main; }
+.ads { grid-area: ads; }
+.footer { grid-area: footer; }
+
+
+/* Container using Grid Template Areas */
+.ecommerce-container {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "products"
+        "sidebar"; /* Sidebar at bottom on mobile */
+    padding: 20px;
+}
+
+.filter-sidebar {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    height: fit-content; /* Only takes as much space as the filters need */
+}
+.product-area { grid-area: products; }
+
+/* The Product Grid inside the main area */
+.product-grid {
+    display: grid;
+    gap: 20px;
+    /* Task 8: Responsive Columns (1 mobile, 2 tablet, 4 desktop) */
+    grid-template-columns: repeat(1, 1fr); 
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the button to the very bottom */
+    height: 100%; /* Ensures all cards in a row stretch to the same height */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;    /* Forces a standard height */
+    object-fit: contain; /* Keeps the whole device visible without cropping */
+    background: #fdfdfd; /* Optional: light background for the image area */
+}
+/* Tablet View (min-width: 768px) */
+@media (min-width: 768px) {
+    .ecommerce-container {
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: "sidebar products"; /* Sidebar moves to left */
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+}
+
+/* Desktop View (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    }
+}
+
+/* Dashboard Grid Structure */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    min-height: 100vh;
+}
+
+.dashboard-sidebar {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: none; /* Hidden on mobile by default */
+}
+
+/* Tablet and Desktop Grid */
+@media (min-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 250px 1fr; /* Fixed sidebar width */
+    }
+    .dashboard-sidebar {
+        display: block; /* Show sidebar on tablet/desktop  */
+    }
+}
+
+/* Magazine Layout Base */
+.magazine-grid-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: 1fr; /* Mobile: Single column [cite: 215] */
+}
+
+.magazine-grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Tablet: Symmetric Grid [cite: 211] */
+@media (min-width: 768px) {
+    .magazine-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: Asymmetric Grid  */
+@media (min-width: 1200px) {
+    .magazine-grid-container {
+        /* 3 columns: Main (wide), Sidebar (narrow), Sub-stories (stacked) */
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .featured-story {
+        grid-column: span 2; /* Main story takes 2 columns  */
+        grid-row: span 2;
+    }
+
+    .mag-sidebar {
+        grid-row: span 2;
+        background: #f9f9f9;
+        padding: 15px;
+    }
+}
+
+.portfolio-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    /* This ensures the grid never exceeds the screen width */
+    width: 100%;
+    box-sizing: border-box; 
+    grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+}
+
+@media (min-width: 1024px) {
+    .portfolio-grid {
+        /* Use minmax(0, 1fr) for the main area to prevent it from expanding */
+        grid-template-columns: minmax(0, 1fr) 300px; 
+        grid-template-areas: 
+            "header header"
+            "main sidebar"
+            "footer footer";
+        width: 100%;
+        max-width: 100%; 
+        overflow-x: hidden; /* Safety net */
+    }
+}
+/* Add background colors to see the areas clearly */
+.port-header { grid-area: header; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+.port-main { grid-area: main; background: #fff; padding: 20px; border-radius: 8px; }
+.port-sidebar { grid-area: sidebar; background: #f9f9f9; padding: 20px; border-radius: 8px; height: fit-content; }
+.port-footer { grid-area: footer; border-top: 1px solid #eee; margin-top: 20px; }

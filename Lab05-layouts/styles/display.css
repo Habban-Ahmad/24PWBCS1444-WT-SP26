@@ -1,0 +1,55 @@
+/* Base Styles */
+.box {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #2c3e50;
+    background-color: #3498db;
+    color: white;
+}
+
+/* Task 1: Comparison Behavior */
+.block-box {
+    display: block; /* Takes full width [cite: 32] */
+}
+
+.inline-box {
+    display: inline; /* Width/Height ignored, stays in line [cite: 33] */
+}
+
+.inline-block-box {
+    display: inline-block; /* Stays in line but accepts Width/Height [cite: 34] */
+    width: 150px;
+}
+
+/* Task 1: Table Display Logic [cite: 40, 142] */
+.custom-table {
+    display: table;
+    width: 100%;
+}
+.table-row {
+    display: table-row;
+}
+.table-cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+/* Task 1: Responsive Hidden Elements [cite: 145] */
+.responsive-hidden {
+    display: none; /* Hidden by default (Mobile-First) [cite: 118, 119] */
+    background-color: #27ae60;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Desktop Breakpoint [cite: 249] */
+@media (min-width: 1024px) {
+    .responsive-hidden {
+        display: block; /* Becomes visible on desktop [cite: 143] */
+    }
+}

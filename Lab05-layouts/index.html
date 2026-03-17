@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Portfolio | Habban Ahmad</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --success: #27ae60; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg); color: #333; }
+        
+        header { background: var(--primary); color: white; padding: 60px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        header p { opacity: 0.9; font-size: 1.1rem; }
+
+        .container { max-width: 1000px; margin: -50px auto 50px; padding: 20px; }
+        
+        .grid-nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-left: 5px solid var(--accent); position: relative; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        .card h3 { margin-top: 0; color: var(--primary); }
+        .card p { font-size: 0.95rem; color: #666; margin-bottom: 20px; }
+        
+        .status { position: absolute; top: 20px; right: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; color: var(--success); background: #e8f5e9; padding: 4px 10px; border-radius: 20px; }
+        
+        .btn { display: inline-block; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
+        .btn:hover { background: #2980b9; }
+
+        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Web Engineering Lab 05 & 06</h1>
+    <p>Habban Ahmad | BS Computer Science | UET Peshawar</p>
+</header>
+
+<div class="container">
+    <div class="grid-nav">
+        <div class="card">
+            <span class="status">Completed</span>
+            <h3>Tasks 1 - 3: Legacy Layouts</h3>
+            <p>Exploring CSS Floats, Clearing, and traditional Magazine Layout techniques.</p>
+            <a href="layouts/magazine-float.html" class="btn">View Float Layout</a>
+        </div>
+
+        <div class="card">
+            <span class="status">Completed</span>
+            <h3>Tasks 4, 5 & 12: Flexbox System</h3>
+            <p>Building navigation bars, card layouts, and responsive form builders using Flexbox.</p>
+            <a href="exercises/flexbox-exercises.html" class="btn">View Exercises</a>
+        </div>
+
+        <div class="card">
+            <span class="status">Completed</span>
+            <h3>Task 6 & 8: Grid Power</h3>
+            <p>Mastering 2D layouts including Photo Galleries and E-commerce Product Grids.</p>
+            <a href="layouts/ecommerce-grid.html" class="btn">View E-commerce</a>
+        </div>
+
+        <div class="card">
+            <span class="status">Completed</span>
+            <h3>Task 13 & 14: Final Portfolio</h3>
+            <p>The "Master Task" combining Grid, Flexbox, and Responsive Data Tables into one UI.</p>
+            <a href="layouts/portfolio-mixed.html" class="btn">View Portfolio</a>
+        </div>
+
+        <div class="card">
+            <span class="status">Completed</span>
+            <h3>Task 15: Mobile-First</h3>
+            <p>A strictly mobile-first landing page built for performance and progressive enhancement.</p>
+            <a href="layouts/landing-page.html" class="btn">View Landing Page</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Lab Submission - Department of Computer Science & IT</p>
+</footer>
+
+</body>
+</html>

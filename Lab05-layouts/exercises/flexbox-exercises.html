@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4: Flexbox Navigation</title>
+    <link rel="stylesheet" href="../styles/flexbox.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">UET Peshawar</div>
+        
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+<section class="card-container">
+    <h2>Task 5: Flexbox Card Layout</h2>
+    <div class="flex-cards">
+        <div class="card">
+            <div class="card-content">
+                <h3>Cloud Engineering</h3>
+                <p>Learning to build scalable infrastructure using AWS and Azure.</p>
+            </div>
+            <div class="card-actions">
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Machine Learning</h3>
+                <p>Exploring neural networks, deep learning, and data science patterns. This card has more text to test the equal height feature.</p>
+            </div>
+            <div class="card-actions">
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Web Technology</h3>
+                <p>Mastering HTML, CSS, and modern layout techniques.</p>
+            </div>
+            <div class="card-actions">
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <div style="padding: 20px;">
+        <h2>Flexbox Navigation Demo</h2>
+        <p>Resize your browser to see the navigation switch from horizontal to a mobile menu.</p>
+    </div>
+
+    <section class="form-builder-demo">
+    <h2>Task 12: Flexbox Form Builder</h2>
+    <form class="flex-form">
+        <div class="flex-row">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Habban">
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Ahmad">
+            </div>
+        </div>
+
+        <div class="flex-row">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="example@uet.edu.pk">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="+92...">
+            </div>
+            <div class="form-group">
+                <label>Department</label>
+                <select>
+                    <option>Computer Science</option>
+                    <option>Electrical Engineering</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Project Description</label>
+            <textarea rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Application</button>
+    </form>
+</section>
+</body>
+</html>

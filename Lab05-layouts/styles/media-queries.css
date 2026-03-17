@@ -1,0 +1,35 @@
+/* Base Styles (Mobile: 0px - 767px) [cite: 245] */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+.device-label::after { content: "Mobile Portait/Phone"; }
+
+.scaling-text { font-size: 1rem; } /* [cite: 206] */
+
+.breakpoint-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Tablet (768px and up) [cite: 246-247] */
+@media (min-width: 768px) {
+    body { background-color: #f0f3f4; }
+    .device-label::after { content: "Tablet"; }
+    .breakpoint-indicator { background: #f39c12; }
+    .scaling-text { font-size: 1.5rem; }
+}
+
+/* Desktop (1024px and up) [cite: 248-249] */
+@media (min-width: 1024px) {
+    .device-label::after { content: "Desktop"; }
+    .breakpoint-indicator { background: #27ae60; }
+    .scaling-text { font-size: 2rem; }
+}

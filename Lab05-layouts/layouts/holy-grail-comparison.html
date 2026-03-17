@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7: Holy Grail Comparison</title>
+    <link rel="stylesheet" href="../styles/float.css">
+    <link rel="stylesheet" href="../styles/flexbox.css">
+    <link rel="stylesheet" href="../styles/grid.css">
+    <style>
+        section { margin-bottom: 50px; border-top: 5px solid #333; padding-top: 20px; }
+        .header, .footer { background: #34495e; color: white; padding: 10px; text-align: center; }
+        .nav, .ads { background: #ecf0f1; padding: 15px; }
+        .main { background: #fff; padding: 15px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+    <section class="float-version clearfix">
+        <h2>1. Float Implementation</h2>
+        <div class="header">Header</div>
+        <div class="nav float-sidebar">Nav (Left)</div>
+        <div class="main float-main">Main Content</div>
+        <div class="ads float-sidebar">Ads (Right)</div>
+        <div class="footer" style="clear: both;">Footer</div>
+    </section>
+
+    <section class="flex-version">
+        <h2>2. Flexbox Implementation</h2>
+        <div class="header">Header</div>
+        <div class="flex-container">
+            <div class="nav">Nav (Left)</div>
+            <div class="main">Main Content</div>
+            <div class="ads">Ads (Right)</div>
+        </div>
+        <div class="footer">Footer</div>
+    </section>
+
+    <section class="grid-version">
+        <h2>3. CSS Grid Implementation</h2>
+        <div class="grid-container">
+            <header class="header">Header</header>
+            <nav class="nav">Nav (Left)</nav>
+            <main class="main">Main Content</main>
+            <aside class="ads">Ads (Right)</aside>
+            <footer class="footer">Footer</footer>
+        </div>
+    </section>
+
+</body>
+</html>

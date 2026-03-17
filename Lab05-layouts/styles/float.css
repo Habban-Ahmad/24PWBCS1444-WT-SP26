@@ -1,0 +1,49 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* Clearfix Technique: Essential for Float Layouts */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Task 2: Image Wrapping */
+.wrapped-img {
+    float: left; /* Image moves left, text flows right */
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Mobile-First: Elements stack by default */
+.main-content, .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Task 2: Responsive Columns (Media Queries) */
+@media (min-width: 768px) {
+    .main-content {
+        float: left; /* Side-by-side on tablet/desktop */
+        width: 65%;
+    }
+    
+    .sidebar {
+        float: right;
+        width: 30%;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .float-sidebar { float: left; width: 20%; }
+    .float-main { float: left; width: 60%; }
+}
